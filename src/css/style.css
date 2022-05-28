@@ -1,0 +1,539 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* player background image with light drack layer*/
+.bg-imge-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../img/ncs1.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-imge-body .filter-layer{
+    background-color: rgba(37, 36, 36, 0.274);
+    backdrop-filter: blur(19px) ;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+/* button styles */
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* players contaner styles */
+.music-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music-content {
+    position: relative;
+    width: 245px;
+    height: 450px;
+    background-color: black;
+    border-width: 8px 4px !important;
+    border: solid;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: -5px 0px 6px #f4fa9c,
+                0px 5px 6px #ff00c8,
+                5px 0px 6px #ba53de,
+                0px -5px 6px #88bef5;
+    animation: border-animation 2.5s linear infinite;
+}
+
+/* players container borders colors animation */
+@keyframes border-animation {
+    0%{
+        box-shadow: -5px 0px 6px #f35588,
+                0px -5px 6px #05dfd7,
+                5px 0px 6px #a3f7bf,
+                0px 5px 6px #fff561;
+    }
+    10%{
+        box-shadow: -5px 0px 6px #1eb2a6,
+                0px -5px 6px #d4f8e8,
+                5px 0px 6px #ffa34d,
+                0px 5px 6px #f87575;
+    }
+    20%{
+        box-shadow: -5px 0px 6px #4f3961,
+                0px -5px 6px #ea728c,
+                5px 0px 6px #fc9d9d,
+                0px 5px 6px #f3d4d4;
+    }
+    30%{
+        box-shadow: -5px 0px 6px #721b65,
+                0px -5px 6px #b80d57,
+                5px 0px 6px #f8615a,
+                0px 5px 6px #ffd868;
+    }
+    40%{
+        box-shadow: -5px 0px 6px #1eb2a6,
+                0px -5px 6px #d4f8e8,
+                5px 0px 6px #ffa34d,
+                0px 5px 6px #f67575;
+    }
+    50%{
+        box-shadow: -5px 0px 6px #f1f3f4,
+                0px -5px 6px #79bac1,
+                5px 0px 6px #2a7886,
+                0px 5px 6px #512b58;
+    }
+    60%{
+        box-shadow: -5px 0px 6px #4f3961,
+                    0px -5px 6px #0f4c81,
+                    5px 0px 6px #ed6663,
+                    0px 5px 6px #ffa372;
+        }
+    70%{
+        box-shadow: -5px 0px 6px #beebe9,
+                0px -5px 6px #fffdf9,
+                5px 0px 6px #ffe3ed,
+                0px 5px 6px #df7861;
+    }
+    80%{
+        box-shadow: -5px 0px 6px #fcf8e8,
+                0px -5px 6px #ecdfc8,
+                5px 0px 6px #ecb390,
+                0px 5px 6px #f0f0f0;
+    }
+    90%{
+        box-shadow: -5px 0px 6px #071a52,
+                0px -5px 6px #086972,
+                5px 0px 6px #9e579d,
+                0px 5px 6px #fc85ae;
+    }
+    100%{
+        box-shadow: -5px 0px 6px #a7ff83,
+                0px -5px 6px #17b978,
+                5px 0px 6px #086972,
+                0px 5px 6px #071a52;
+    }
+} 
+
+/* players background image and light darck layers */
+#bg-imge img {
+    width: 105%;
+    height: 105%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    filter: blur(6px);
+    -webkit-filter: blur(5px);
+}
+
+#blacklayer {
+    height: 450px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.404);
+    position: absolute;
+    z-index: 2;
+}
+
+/* players main menu */
+#menu {
+    position: relative;
+    z-index: 3;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* players volume input tag style */
+#volume-container {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#volume-container img {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider {
+    width: 110px;
+    height: 1px !important;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 100;
+    outline: none;
+    position: relative;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #e62c2f;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: scale(1);
+}
+
+.slider:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+}
+
+/* player tract art / poster styles */
+#music-image {
+    position: relative;
+    width: 100%;
+    height: 215px;
+    z-index: 3;
+}
+
+#circle-image{
+    position: absolute;
+    top: -33%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 120px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 5px solid rgb(247, 230, 229);
+    overflow: hidden;
+}
+
+ #music-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* track title style */
+#music-title {
+    position: relative;
+    padding: 0 25px;
+    top: 65%;
+    color: #fff;
+}
+
+#music-title h5 {
+    color: #fff;
+    font-size: 20px;
+    margin: 20px 0 5px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.2;
+}
+
+#music-title h6 {
+    margin: 0;
+    font-size: 12.5px;
+    text-align: center;
+    font-weight: 400;
+}
+/* music contoler section, seeking range, music current time, music duration and button style */
+#music-menu {
+    width: 90%;
+    height: 40px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#music-menu img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+#currentTime{
+    position: relative;
+    z-index: 3;
+    padding: 0 12px 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+#currentTime span{
+    font-size: 12px;
+}
+
+#seekslider{
+    width: 100px;
+    height: 2px !important;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 3;
+    outline: none;
+    position: fixed;
+    margin-left: 70px;
+}
+
+.seekslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #e62c2f;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: scale(1);
+}
+
+.seekslider:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+}
+
+#button {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    margin-top: 20px;
+}
+
+#button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play {
+    width: 55px;
+    height: 45px;
+    margin: 0 5px;
+}
+
+.play img {
+    width: 100%;
+    height: 100%;
+}
+.bkw img,
+.forw img{
+    width: 15px;
+    height: 15px;
+}
+
+.pre img,
+.next img{
+    width: 13px;
+    height: 13px;
+}
+
+#button .like{
+    position: absolute;
+    top: 25%;
+    right: 6%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#button .like i{
+    color: rgba(225, 225, 225, 0.883);
+}
+
+#button .repeat{
+    position: absolute;
+    top: 22%;
+    left: 3%;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#repeat img{
+    width: 16px;
+    height: 16px;
+}
+
+/* track search section */
+#search_track {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background: #626262;
+}
+
+/* search track section sow */
+#search_track.show{
+  z-index: 4;
+}
+
+/*search track header */
+#header {
+  display: grid;
+  grid-template-columns: 22px 0px 0px;
+  margin: 3px;
+}
+
+/* search track header icon */
+#header i {
+  line-height: 30px;
+  margin-left: 3px;
+  color: #E0E0E0;
+}
+#header form {
+  display: grid;
+  grid-template-columns: 170px 25px;
+}
+
+#header form input[type=text]{
+  height: 25px;
+  outline: none;
+  border: none;
+  color: #E0E0E0;
+  background: #101010;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#header form div{
+  position: relative;
+  float: right;
+  background: #101010;
+  height: 25px;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  outline: none;
+}
+
+#header form div i{
+  line-height: 27px;
+  margin-left: 7px;
+  color: #E0E0E0;
+}
+
+/* search nav bar style */
+.search-nav-bar-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+.search-nav-bar-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 13px;
+    float: left;
+    color: #E0E0E0;
+    background: #082660;
+    border-radius: 10px 10px 0px 0px;
+}
+.search-nav-bar-menu a:hover{
+    background: #2068F7;
+}
+.active {
+  background: #2068F7;
+  border-bottom: 3px solid #2068F7;
+}
+
+.music-list {
+    width: 100%;
+    height: 87%;
+    background: #211c1c;
+    overflow: scroll;
+}
+
+.music-list::-webkit-scrollbar{
+    width: 0px;
+}
+
+.music-list {
+    padding: 3px;
+}
+
+.music-list ul {
+    padding-left: 0;
+}
+
+.music-list ul li{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin-bottom: 9px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.music-list ul li.show{
+    background: #284890;
+}
+
+.music-list ul li div.row span {
+  color: #E8E8E8;
+  font-weight: 600;
+}
+
+.music-list ul li div.row p {
+  color: #B8B8B8;
+  font-weight: 500;
+}
+
+.music-list ul li .audio-duration{
+    padding-left: 20px;
+    color: #74A4F8;
+}
+
+.music-list ul li:last-child{
+    border-bottom: 0px;
+}
+
+.music-list ul li div.row span{
+  font-size: 15px;
+}
+
+.row p{
+  font-size: 12px;
+}
+
+.music-list ul li .audio-duration{
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.active_track{
+  background: #2D59B5;
+}

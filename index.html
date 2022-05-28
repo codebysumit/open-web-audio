@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Wed Audio</title>
+    <!-- all css files -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/fontawesome-6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="bg-imge-body" id="bg-imge-body">
+        <div class="filter-layer"></div>
+    </div>
+     <!-- music player container -->
+     <div class="music-container">
+        <!-- music player content -->
+        <div class="music-content">
+
+            <!-- music player background image -->
+            <div id="bg-imge">
+                <div id="blacklayer"></div>
+                <img id="bgImge" src="" alt="">
+            </div>
+
+            <!-- searching section -->
+            <div id="search_track" class="">
+                <!-- search button section -->
+                <div  id="header">
+                <!-- back to hone button -->
+                <i id="closemoreMusic" class="fa fa-arrow-left"></i>
+                    <form action="#" style="margin:auto;max-width:240px">
+                        <!-- search filder -->
+                        <input onkeyup="track_search()" type="text" placeholder="Search.." name="search_bar" id="search_bar">
+                        <div id="clearButton">
+                          <i class="fa fa-xmark"></i>
+                        </div>
+                      </form>
+                </div>
+
+                <!-- search navbar bar menu -->
+                <div class="search-nav-bar-menu">
+                    <a href="#" class="active">Track</a>
+                    <a href="#">Artists</a>
+                    <a href="#">Album</a>
+                    <a href="#">Playlist</a>
+                </div> 
+
+                <!-- music list display -->
+                <div class="music-list">
+                  <ul id="myMenu">
+                    <!--li tags fatch from js-->
+                  </ul>
+              </div>
+            </div>
+            
+            <!-- music player menu bar section -->
+            <div id="menu">
+                <img id="menuBtn" src="src/img/menu.png" alt="">
+                <img src="src/img/search.png" alt="" onclick="focus_search_bar()">
+            </div>
+            
+            <!-- music player volume container section -->
+            <div id="volume-container">
+                <img src="src/img/volume-low.png" alt="" class="volume-down">
+                <input type="range" class="slider" id="volumeslider" min="0" max="100" value="100" step="1">
+                <img src="src/img/volumn-high.png" alt="" class="volume-up">
+            </div>
+            
+            <!-- music player music image and info section -->
+            <div id="music-image">
+                <!-- music image -->
+                 <div id="circle-image">
+                     <img id="poste_img" src="" alt="">
+                 </div>
+                 <!-- music title and music status -->
+                 <div id="music-title">
+                     <h5 id="track_name"></h5>
+                     <h6 id="track_artist"></h6>
+                 </div>
+            </div>
+            <!-- music playerar music menu -->
+            <div id="music-menu">
+                <button id="random">
+                    <img src="src/img/random.png" alt="">
+                </button>
+                <button id="mutebtn">
+                    <img src="src/img/speaker.png" alt="">
+                </button>
+            </div>
+            <!-- music current time -->
+            <div id="currentTime">
+                <span id="curtimetext"></span>
+                <span id="durtimetext"></span>
+            </div>
+            <!-- music players seekslider -->
+            <input type="range" class="seekslider" id="seekslider" min="0" max="100" value="100" step="1">
+
+            <div id="button">
+                <button class="repeat" id="repeat"><img src="src/img/rep.png" alt=""></button>
+
+                <div>
+                    <button class="bkw" id="bkwbtn"><img src="src/img/backward.png" alt=""></button>
+
+                    <button class="pre" id="prevbtn"><img src="src/img/pervious.png" alt=""></button>
+
+                    <button class="play" id="playpusebtn"><img src="src/img/play-red.png" alt=""></button>
+
+                    <button class="next" id="nextbtn"><img src="src/img/next.png" alt=""></button>
+                    
+                    <button class="forw" id="forwbtn"><img src="src/img/forward.png" alt=""></button>
+                </div>
+                <span class="like">
+                    <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- all js file -->
+    <script src="src/jquery/jquery-3.6.0.min.js"></script>
+    <!--include music array-->
+    <script src="src/js/musiclist.js"></script>
+    <script src="src/js/add-on.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
