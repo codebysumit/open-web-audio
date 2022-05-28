@@ -2,7 +2,7 @@
 
 ![img1](https://user-images.githubusercontent.com/87431704/170809556-38a36eb2-3010-4d25-92e3-75d31d20696d.jpg)
 
-Open Wed Audio is open source webside based audio player. It help to play audio file in your web browser. this project create by Sumit Das.
+Open Web Audio is open source webside based audio player. It help to play audio file in your web browser. this project create by Sumit Das.
 
 ## Demo
 Open Web Audio demo link: [Open Web Audio Live Preview](https://codebysumit.github.io/open-web-audio/)
