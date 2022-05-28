@@ -8,10 +8,10 @@ Open Wed Audio is open source webside based audio player. It help to play audio 
 Open Web Audio demo link: [Open Web Audio Live Preview](https://codebysumit.github.io/open-web-audio/)
 
 
-Demo video from facebook: [Open Web Audio Live Demo Video](https://m.facebook.com/100081037867109/posts/pfbid02QQynXUk2cr42LFLL58NLeth6gQ7fzV5C7yKVjkFVSmQ7hUHoiWAvTAy7a9JuVj2jl/)
+Demo video from facebook: [Open Web Audio Demo Video](https://m.facebook.com/100081037867109/posts/pfbid02QQynXUk2cr42LFLL58NLeth6gQ7fzV5C7yKVjkFVSmQ7hUHoiWAvTAy7a9JuVj2jl/)
 
 ## Version
-current version: v 1.0.0
+Current version: v 1.0.0
 
 Stable version: v 1.0.0
 
