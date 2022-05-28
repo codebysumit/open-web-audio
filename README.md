@@ -13,15 +13,27 @@ Stable version: v 1.0.0
 
 ## Players Features
 **1.** ⏯️ Play and pushe the track
+
 **2.** ▶️ Change next track
+
 **3.** ◀️ Change privious track
+
 **4.** ⌛ Seeking track inpute range
+
 **5.** 📢 Volume seek inpute range
+
 **6.** ⏭️ Forword tack 30 minite
+
 **7.** ⏮️ Backword track 30 minite
+
 **8.** 🔁 Repite all track
+
 **9.** 🔂 Repite one track
+
 **10.** 🙅‍♀️🔁 No repite track
+
 **11.** 🔀 Shuffle mode
+
 **12.** 📜 List of all track
+
 **13.** 🔎 Search a perticular track
